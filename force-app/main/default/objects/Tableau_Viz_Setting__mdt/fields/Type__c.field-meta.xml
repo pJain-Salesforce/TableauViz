@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RECORDFIELD</fullName>
+                <default>true</default>
+                <label>Record Field Value</label>
+            </value>
+            <value>
+                <fullName>CHILDREC</fullName>
+                <default>false</default>
+                <label>Child Records</label>
+            </value>
+            <value>
+                <fullName>USERFIELD</fullName>
+                <default>false</default>
+                <label>Current User Field Value</label>
+            </value>
+            <value>
+                <fullName>USERCHILDREC</fullName>
+                <default>false</default>
+                <label>Current User Child Records</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

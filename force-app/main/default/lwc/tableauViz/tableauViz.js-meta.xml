@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Tableau Visualization</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+    <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
+            <property
+                name="vizUrl"
+                type="String"
+                label="Dashboard URL"
+                required="true"
+                description="Click the Share button for the Tableau view. From the Share View dialog box, click Copy Link and paste the URL link here."
+                default="https://public.tableau.com/views/WorldIndicators/GDPpercapita"
+            />
+            <property
+                name="showTabs"
+                type="Boolean"
+                default="false"
+                label="Show Tabs (Deprecated - always visible)"
+            />
+            <property
+                name="showToolbar"
+                type="Boolean"
+                default="false"
+                label="Show Toolbar (Deprecated - always visible)"
+            />
+            <property
+                name="height"
+                type="Integer"
+                default="550"
+                label="Height"
+                required="true"
+            />
+            <property
+                name="sfVizDefinition"
+                type="String"
+                datasource="apex://TableauVizPicklist"
+                label="Custom Filter Setting Definition (from Custom Metadata)"
+            />
+            <supportedFormFactors>
+                <supportedFormFactor type="Small" />
+                <supportedFormFactor type="Large" />
+            </supportedFormFactors>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
